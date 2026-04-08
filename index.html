@@ -1,143 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VANTA DRIFT</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: #0a0a0a;
-      color: white;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      padding: 20px 40px;
-      border-bottom: 1px solid #222;
-    }
-    header h1 {
-      font-weight: 600;
-      letter-spacing: 2px;
-    }
-    nav a {
-      margin-left: 20px;
-      text-decoration: none;
-      color: #aaa;
-      transition: 0.3s;
-    }
-    nav a:hover { color: white; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VANTA DRIFT</title>
 
-    .hero {
-      height: 80vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      background: linear-gradient(to bottom, rgba(0,0,0,0.6), #0a0a0a), url('https://images.unsplash.com/photo-1520975916090-3105956dac38');
-      background-size: cover;
-      background-position: center;
-    }
-    .hero h2 {
-      font-size: 48px;
-      letter-spacing: 4px;
-    }
-    .hero p {
-      margin-top: 10px;
-      color: #ccc;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap" rel="stylesheet">
 
-    .btn {
-      margin-top: 20px;
-      display: inline-block;
-      padding: 12px 24px;
-      border: 1px solid white;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
-    }
-    .btn:hover {
-      background: white;
-      color: black;
-    }
+<style>
+body {
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#0a0a0a;
+  color:white;
+}
 
-    .products {
-      padding: 60px 40px;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #111;
-      padding: 20px;
-      border-radius: 10px;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-    }
-    .card img {
-      width: 100%;
-      border-radius: 10px;
-    }
-    .card h3 {
-      margin-top: 15px;
-    }
-    .card p {
-      color: #aaa;
-      margin: 5px 0;
-    }
+header {
+  text-align:center;
+  padding:20px;
+}
+header img {
+  width:120px;
+}
 
-    footer {
-      text-align: center;
-      padding: 30px;
-      border-top: 1px solid #222;
-      color: #777;
-    }
-  </style>
+.slider {
+  height:80vh;
+  position:relative;
+  overflow:hidden;
+}
+.slide {
+  position:absolute;
+  width:100%;
+  height:100%;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  transition:1s;
+}
+.slide.active { opacity:1; }
+
+.products {
+  padding:40px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+}
+
+.card {
+  background:#111;
+  padding:15px;
+  border-radius:10px;
+  text-align:center;
+}
+
+.card img {
+  width:100%;
+}
+
+.card h3 { margin:10px 0; }
+.price { color:#aaa; }
+
+.btn {
+  display:inline-block;
+  margin-top:10px;
+  padding:10px;
+  border:1px solid white;
+  color:white;
+  text-decoration:none;
+}
+.btn:hover {
+  background:white;
+  color:black;
+}
+
+footer {
+  text-align:center;
+  padding:20px;
+  color:#777;
+}
+</style>
 </head>
+
 <body>
 
 <header>
-  <h1>VANTA DRIFT</h1>
-  <nav>
-    <a href="#">Inicio</a>
-    <a href="#productos">Drop</a>
-    <a href="#">Contacto</a>
-  </nav>
+  <img src="logo.png">
 </header>
 
-<section class="hero">
-  <div>
-    <h2>DROP 001</h2>
-    <p>Streetwear oscuro. Minimal. Real.</p>
-    <a href="#productos" class="btn">Ver colección</a>
-  </div>
-</section>
+<!-- SLIDER -->
+<div class="slider">
+  <div class="slide active" style="background-image:url('REMERABAPE.jpg')"></div>
+  <div class="slide" style="background-image:url('REMERAT90.png')"></div>
+  <div class="slide" style="background-image:url('FOTOPRODUCTOCAMPERABLESSED.jpg')"></div>
+</div>
 
-<section id="productos" class="products">
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070" alt="">
-    <h3>Remera Oversize</h3>
-    <p>$25.000</p>
-  </div>
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1514996937319-344454492b37" alt="">
-    <h3>Campera Negra</h3>
-    <p>$60.000</p>
-  </div>
-  <div class="card">
-    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b" alt="">
-    <h3>Jogging</h3>
-    <p>$40.000</p>
-  </div>
+<section class="products">
+
+<div class="card">
+<img src="FOTOPRODUCTOBAPE.png">
+<h3>Remera Bape</h3>
+<p class="price">$24.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20Bape" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTOT90.png">
+<h3>Remera T90</h3>
+<p class="price">$17.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20T90" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTONKAIR.jpg">
+<h3>Remera NK Air</h3>
+<p class="price">$21.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20NK%20Air" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTONY.png">
+<h3>Remera NY</h3>
+<p class="price">$20.000</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20NY" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTOREMERABLESSED.png">
+<h3>Remera Blessed</h3>
+<p class="price">$19.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20Blessed" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="CAMPERABLESSED.png">
+<h3>Campera Blessed</h3>
+<p class="price">$34.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20la%20Campera%20Blessed" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTOJOGGINGVANTA.jpg">
+<h3>Jogging VANTA</h3>
+<p class="price">$28.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20el%20Jogging%20Vanta" class="btn">Comprar</a>
+</div>
+
+<div class="card">
+<img src="FOTOPRODUCTOJOGGINGBMW.png">
+<h3>Jogging BMW</h3>
+<p class="price">$24.999</p>
+<a href="https://wa.me/5491122457185?text=Quiero%20el%20Jogging%20BMW" class="btn">Comprar</a>
+</div>
+
 </section>
 
 <footer>
-  <p>© 2026 VANTA DRIFT</p>
+© VANTA DRIFT
 </footer>
+
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}, 3000);
+</script>
 
 </body>
 </html>
