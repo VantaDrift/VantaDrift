@@ -13,6 +13,7 @@ body {
   font-family:'Montserrat',sans-serif;
   background:#0a0a0a;
   color:white;
+  scroll-behavior:smooth;
 }
 
 /* HEADER */
@@ -21,7 +22,29 @@ header {
   padding:20px;
 }
 header img {
-  width:100px;
+  width:90px;
+}
+
+/* HERO */
+.hero {
+  text-align:center;
+  padding:30px 20px;
+}
+.hero p {
+  color:#aaa;
+  max-width:500px;
+  margin:0 auto 20px;
+}
+.btn-main {
+  display:inline-block;
+  padding:12px 25px;
+  border:1px solid #aaa;
+  color:white;
+  text-decoration:none;
+}
+.btn-main:hover {
+  background:white;
+  color:black;
 }
 
 /* SLIDER */
@@ -31,23 +54,16 @@ header img {
   display:flex;
   align-items:center;
   justify-content:center;
-  overflow:hidden;
 }
 
 .slide {
   position:absolute;
-  width:100%;
-  height:100%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
   opacity:0;
   transition:1s;
 }
 
 .slide img {
-  max-width:90%;
-  max-height:100%;
+  max-height:60vh;
   object-fit:contain;
 }
 
@@ -57,14 +73,15 @@ header img {
 
 /* PRODUCTS */
 .products {
-  padding:40px;
+  background:#111;
+  padding:50px 30px;
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
   gap:25px;
 }
 
 .card {
-  background:#111;
+  background:#1a1a1a;
   padding:15px;
   border-radius:10px;
   text-align:center;
@@ -76,14 +93,15 @@ header img {
   object-fit:contain;
 }
 
-.card h3 { margin:10px 0; }
-.price { color:#aaa; }
+.price {
+  color:#aaa;
+}
 
 .btn {
   display:inline-block;
   margin-top:10px;
   padding:10px;
-  border:1px solid white;
+  border:1px solid #aaa;
   color:white;
   text-decoration:none;
 }
@@ -106,7 +124,7 @@ footer {
   <img src="logovantadrift.jpg">
 </header>
 
-<!-- SLIDER -->
+<!-- SLIDER (PUBLICITARIO CORRECTO) -->
 <div class="slider">
 
   <div class="slide active">
@@ -118,68 +136,88 @@ footer {
   </div>
 
   <div class="slide">
-    <img src="FOTOPRODUCTOCAMPERABLESSED.jpg">
+    <!-- ✅ CAMPEra PUBLICITARIA -->
+    <img src="CAMPERABLESSED.png">
   </div>
 
 </div>
 
+<!-- QUIENES SOMOS -->
+<section class="hero">
+
+<p>
+VANTA DRIFT es streetwear limitado.  
+Piezas pensadas para destacar sin decir de más.  
+<br><br>
+Negro, gris y esencia.  
+Minimal, pero con presencia.  
+<br><br>
+No es para todos.  
+Es para los que se animan a llevar algo distinto.
+</p>
+
+<a href="#drop" class="btn-main">VER DROP</a>
+
+</section>
+
 <!-- PRODUCTOS -->
-<section class="products">
+<section id="drop" class="products">
 
 <div class="card">
 <img src="FOTOPRODUCTOBAPE.png">
 <h3>Remera Bape</h3>
 <p class="price">$24.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20Bape" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Remera%20Bape" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTOT90.png">
 <h3>Remera T90</h3>
 <p class="price">$17.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20T90" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Remera%20T90" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTONKAIR.jpg">
 <h3>Remera NK Air</h3>
 <p class="price">$21.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20NK%20Air" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Remera%20NK%20Air" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTONY.png">
 <h3>Remera NY</h3>
 <p class="price">$20.000</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20NY" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Remera%20NY" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTOREMERABLESSED.png">
 <h3>Remera Blessed</h3>
 <p class="price">$19.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Remera%20Blessed" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Remera%20Blessed" class="btn">Comprar</a>
 </div>
 
 <div class="card">
-<img src="CAMPERABLESSED.png">
+<!-- ✅ CAMPEra PRODUCTO CORRECTO -->
+<img src="FOTOPRODUCTOCAMPERABLESSED.jpg">
 <h3>Campera Blessed</h3>
 <p class="price">$34.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20la%20Campera%20Blessed" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Campera%20Blessed" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTOJOGGINGVANTA.jpg">
 <h3>Jogging VANTA</h3>
 <p class="price">$28.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20el%20Jogging%20Vanta" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Jogging%20Vanta" class="btn">Comprar</a>
 </div>
 
 <div class="card">
 <img src="FOTOPRODUCTOJOGGINGBMW.png">
 <h3>Jogging BMW</h3>
 <p class="price">$24.999</p>
-<a href="https://wa.me/5491122457185?text=Quiero%20el%20Jogging%20BMW" class="btn">Comprar</a>
+<a href="https://wa.me/5491122457185?text=Jogging%20BMW" class="btn">Comprar</a>
 </div>
 
 </section>
